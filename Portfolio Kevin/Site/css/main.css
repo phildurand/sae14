@@ -1,0 +1,791 @@
+/******** PROJET WEB1 - SAE14 SILLIAU KEVIN ********/
+
+/******** PARAMETRES GENERAUX ********/
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+ 
+#particles {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    z-index: 2;
+    position: absolute;
+} 
+
+.no-padding {
+    padding: 0;
+}
+
+.divider-bottom {
+    background-color: #1b1b1b;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+.divider-bottom:after {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top right;
+    transform: skewY(-3deg); 
+}
+
+.gray {
+    background-color: #fafafa;
+}
+
+.blue {
+    display: inline;
+    z-index: -1;
+    background-image: linear-gradient(#1976d2, #1976d2);
+    background-position: 0 90%;
+    background-repeat: no-repeat;
+    background-size: 100% 20%;
+}
+
+/******** TYPOGRAPHY ********/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1pt;
+}
+
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+    font-weight: 300;
+    line-height: 25px;
+    color: #1e2024;
+}
+
+/******** NAVIGATION ********/
+ 
+.navbar {
+    z-index: 5;
+    padding: 50px 0;
+    padding-left : 10px;
+    transition: all .5s ease-out;
+} 
+
+.navbar-brand {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 700;
+    font-size: 16pt;
+    letter-spacing: 4pt;
+    color: #fff;
+    padding-bottom: 15px;
+} 
+ 
+.navbar-toggler {
+    margin-right: 15px;
+}
+
+.fa.fa-navicon {
+    font-size: 17pt;
+    color: white;
+}
+
+button:focus {
+    outline: none;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #1b1b1b;
+    border-radius: 0px;
+} 
+
+.navbar-nav .dropdown-menu a {
+    font-size: 8pt;
+    letter-spacing: 2pt;
+    color: #fff;
+}
+
+.dropdown .dropdown-menu a:hover {
+    color: #869791;
+    background-color: transparent;
+}
+
+.inbody {
+    background-color: #1b1b1b;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.3);
+} 
+
+.navbar .navbar-nav>li>a {
+    color: #fff;
+    font-size: 8pt;
+    letter-spacing: 3pt;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #1b1b1b;
+}
+
+.navbar-nav .active>.nav-link, .navbar-nav .nav-link.active, .navbar-nav .nav-link.show, .navbar-nav .show>.nav-link {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 23px;
+}
+ 
+
+.header .navbar .navbar-brand:hover {
+    color: #fff;
+}
+
+/******** INTRODUCTION ********/
+
+.info {
+    margin-top: 10px;
+}
+
+.info .line {
+    width: 25px;
+    height: 1px;
+    background-color: #dcdcdc;
+}
+
+.info h2 {
+    font-size: 18pt;
+    font-weight: 700;
+    letter-spacing: 2pt;
+    margin-top: 20px; 
+    color: #1b1b1b;
+}
+
+.info .main-text {
+    margin: 20px auto;
+    font-size: 12pt;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    max-width: 650px;
+    color: #898989;
+    line-height: 20pt;
+}
+
+.info .video-item .fa {
+    padding-right: 15px;
+    font-size: 17pt;
+}
+
+.info .video-item h5 a {
+    color: #1b1b1b;
+    letter-spacing: 4pt;
+    font-size: 14pt;
+    text-decoration: none;
+}
+ 
+/******** COMPÉTENCES ********/
+
+.competences {
+    margin-top: 0px;
+}
+
+.competences .item-text {
+    height: 800px;
+    background-color: #fafafa;
+    background: url('../images/back1.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.competences .heading {
+    padding: 240px 150px;
+}
+
+.competences .item-text .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 25px 0;
+}
+
+.competences h2 {
+    margin: 0 auto;
+    color: #fff;
+    font-size: 34pt;
+    font-weight: 700;
+    letter-spacing: 0pt;
+}
+
+.competences .subheading {
+    color: #fff;
+    font-size: 12pt;
+    letter-spacing: 1pt;
+    line-height: 18pt;
+    margin: 0 auto;
+}
+
+
+.competences .main-text {
+    margin: 140px 60px;
+}
+
+.competences h4 {
+    margin-left: 50px;  
+    font-weight: 400;
+    font-size: 12pt;
+    letter-spacing: 1pt;
+}
+
+.competences .service-wrap {
+    margin-top: 70px;
+    margin-left: 5px;
+    margin-right: 70px;
+}
+
+.competences .service-wrap .bi {
+    float: left; 
+    font-size: 20pt;
+    color: #455a64;
+}
+
+.competences p {
+    margin-left: 50px;
+    font-size: 11pt;
+    letter-spacing: 1pt;
+    line-height: 17pt;
+    text-align: justify;
+    color: #3B3B3B;
+}
+
+.competences .image-bg {
+    background: url('../images/back1.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: #fbf9f4;
+    height: 800px;
+}
+
+@media screen and (max-width: 768px){
+    .competences .item-text {
+        height: 700px;
+    }
+    .competences .heading {
+        padding-left : 20px;
+        padding-right : 20px;
+    }
+    .competences h2 {
+        font-size : 18pt;
+    }
+    .competences .subheading {
+        font-size : 12pt;
+    }
+    .competences h4 {
+        font-size : 10pt;
+    }
+    .competences p {
+        letter-spacing: 0pt;
+        font-size : 8pt;
+    }
+    .competences .service-wrap {
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+}
+
+/******** COMPÉTENCES 2 ********/
+
+.competencesdeux {
+    margin-top: 0px;
+}
+
+.competencesdeux .item-text {
+    height: 850px;
+    background-color: #fafafa;
+    background: url('../images/back3.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.competencesdeux .heading {
+    padding: 240px 150px;
+}
+
+.competencesdeux .item-text .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 25px 0;
+}
+
+.competencesdeux h2 {
+    margin: 0 auto;
+    color: #fff;
+    font-size: 34pt;
+    font-weight: 700;
+    letter-spacing: 0pt;
+}
+
+.competencesdeux .subheading {
+    color: #fff;
+    font-size: 12pt;
+    letter-spacing: 1pt;
+    line-height: 18pt;
+    margin: 0 auto;
+}
+
+.competencesdeux .main-text {
+    margin: 140px 60px;
+}
+
+.competencesdeux h4 {
+    margin-left: 50px;  
+    font-weight: 400;
+    font-size: 12pt;
+    letter-spacing: 1pt;
+}
+
+.competencesdeux .service-wrap {
+    margin-top: 70px;
+    margin-left: 5px;
+    margin-right: 70px;
+}
+
+.competencesdeux .service-wrap .bi {
+    float: left; 
+    font-size: 20pt;
+    color: #455a64;
+}
+
+.competencesdeux p {
+    margin-left: 50px;
+    font-size: 11pt;
+    letter-spacing: 1pt;
+    line-height: 17pt;
+    text-align: justify;
+    color: #3B3B3B;
+}
+
+.competencesdeux .image-bg {
+    background: url('../images/back3.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: #fbf9f4;
+    height: 800px;
+}
+
+@media screen and (max-width: 768px){
+    .competencesdeux .item-text {
+        height: 750px;
+    }
+    .competencesdeux .heading {
+        padding-left : 20px;
+        padding-right : 20px;
+    }
+    .competencesdeux h2 {
+        font-size : 18pt;
+    }
+    .competencesdeux .subheading {
+        font-size : 12pt;
+    }
+    .competencesdeux h4 {
+        font-size : 10pt;
+    }
+    .competencesdeux p {
+        letter-spacing: 0pt;
+        font-size : 8pt;
+    }
+    .competencesdeux .service-wrap {
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+}
+
+/******** FORMATIONS ********/
+
+.formations {
+    margin-top: 0px;
+}
+
+.formations .item-text {
+    height: 750px;
+    background-color: #fafafa;
+    background: url('../images/back2.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.formations .heading {
+    padding: 240px 150px;
+}
+
+.formations .item-text .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 25px 0;
+}
+
+.formations h2 {
+    margin: 0 auto;
+    color: #fff;
+    font-size: 34pt;
+    font-weight: 700;
+    letter-spacing: 0pt;
+}
+
+.formations .subheading {
+    color: #fff;
+    font-size: 12pt;
+    letter-spacing: 1pt;
+    line-height: 18pt;
+    margin: 0 auto;
+}
+
+
+.set {
+    margin: 150px 120px;
+}
+ 
+
+.single_progress_bar .progress {
+    height: 2px;
+    overflow: hidden;
+    background-color: #e9e9e9;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+
+.single_progress_bar .progress-bar {
+    background-color: #1b1b1b;
+}
+
+.single_progress_bar h5{
+    color: #1b1b1b;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1pt;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+} 
+
+@media screen and (max-width: 768px){
+    .formations .item-text {
+        height: 700px;
+    }
+    .formations .heading {
+        padding-left : 10px;
+        padding-right : 10px;
+    }
+    .formations h2 {
+        font-size : 18pt;
+    }
+    .formations .subheading {
+        font-size : 12pt;
+    }
+    .formations h4 {
+        font-size : 10pt;
+    }
+    .formations p {
+        letter-spacing: 0pt;
+        font-size : 8pt;
+    }
+
+    .formations .set {
+        margin-left : 30px;
+        margin-top : 10px;
+        margin-bottom : 10px;
+    }
+}
+/******** EXPERIENCES ********/
+
+.experiences {
+    margin-top: 0px;
+}
+
+.experiences .item-text {
+    height: 1200px;
+    background-color: #fafafa;
+    background: url('../images/back4.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.experiences .heading {
+    padding: 240px 150px;
+}
+
+.experiences .item-text .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 25px 0;
+}
+
+.experiences h2 {
+    margin: 0 auto;
+    color: #fff;
+    font-size: 34pt;
+    font-weight: 700;
+    letter-spacing: 0pt;
+}
+
+.experiences .subheading {
+    color: #fff;
+    font-size: 12pt;
+    letter-spacing: 1pt;
+    line-height: 18pt;
+    margin: 0 auto;
+}
+
+
+.set {
+    margin: 150px 120px;
+}
+ 
+
+.single_progress_bar .progress {
+    height: 2px;
+    overflow: hidden;
+    background-color: #e9e9e9;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+
+.single_progress_bar .progress-bar {
+    background-color: #1b1b1b;
+}
+
+.single_progress_bar h5{
+    color: #1b1b1b;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1pt;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+} 
+
+@media screen and (max-width: 768px){
+    .experiences .item-text {
+        height: 1100px;
+    }
+    .experiences .heading {
+        padding-left : 10px;
+        padding-right : 10px;
+    }
+    .experiences h2 {
+        padding-top : 180px;
+        font-size : 18pt;
+    }
+    .experiences .subheading {
+        font-size : 12pt;
+    }
+    .experiences h4 {
+        font-size : 10pt;
+    }
+    .experiences p {
+        letter-spacing: 0pt;
+        font-size : 8pt;
+    }
+
+    .experiences .set {
+        margin-left : 30px;
+        margin-top : 10px;
+        margin-bottom : 10px;
+    }
+}
+
+/******** CENTRES D'INTERETS INDEX ********/
+
+.contact {
+    background-color: #0a0a0a;
+    width: auto;
+    padding: 50px 0;
+}
+
+.contact .sm-title {
+    font-size: 12pt;
+    letter-spacing: 1pt;
+    color: #1b1b1b;
+    margin-bottom: 50px;
+}
+
+.contact .line {
+    margin: 30px 0; 
+    width: 30px;
+    height: 2px;
+    background-color: #dcdcdc;
+}
+
+.contact .fa {
+    color: #fff;
+    font-size: 24pt;
+    padding-bottom: 20px;
+}
+
+.contact h2 {
+    margin-top: 100px;
+    font-size: 24pt;
+    font-weight: 700;
+    color: #dcdcdc;
+    letter-spacing: 1pt;
+}
+
+
+.contact h4 {
+    color: #dcdcdc;
+    font-size: 10pt;
+    letter-spacing: 2pt;
+}
+
+.form {
+    background-color: #0a0a0a;
+    padding-top: 200px;
+    padding-bottom: 0px;
+}
+
+.form h2 {
+    font-size: 24pt;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1pt;
+}
+
+.form .line {
+    margin: 30px auto; 
+    width: 30px;
+    height: 2px;
+    background-color: #dcdcdc;
+}
+
+.form p{
+    color: #fff;
+    font-size : 10pt;
+    letter-spacing : 2pt;
+    font-weight : 500;
+}
+
+.form .name {
+    width: 100%;
+    height: 40px;
+    padding: 15px 15px;
+    border: 0;
+    font-size: 10pt;
+    background-color: #111111;
+    color: #fff;
+    border-bottom: 2px solid #1b1b1b;
+}
+
+.form .name:focus {
+    transition: border .6s;
+    -webkit-transition: border .6s;
+    outline: none;
+    border-bottom: 2px solid #0277bd;
+}
+
+.form .two {
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    padding: 15px 15px;
+    border: 0;
+    font-size: 10pt;
+    background-color: #111111;
+    color: #dcdcdc;
+    border-bottom: 2px solid #1b1b1b; 
+}
+
+.form .two:focus {
+    transition: border .6s;
+    -webkit-transition: border .6s;
+    outline: none;
+    border-bottom: 2px solid #0277bd;
+}
+
+.form .msg {
+    margin-top: 30px;
+    width: 100%;
+    height: 130px;
+    padding: 15px 15px;
+    border: 0;
+    font-size: 10pt;
+    background-color: #111111;
+    color: #dcdcdc;
+    border-bottom: 2px solid #1b1b1b;
+}
+
+.form .msg:focus {
+    transition: border .6s;
+    -webkit-transition: border .6s;
+    outline: none;
+    border-bottom: 2px solid #0277bd;
+}
+
+.form .btn {
+    font-weight: 400;
+    font-size: 10pt;
+    letter-spacing: 1pt;
+    color: #1b1b1b;
+    background-color: #fff;
+    border-radius: 0px;
+    padding: 15px 40px;
+    margin-top: 50px;
+}
+
+/******** CENTRES D'INTERETS / COMPETENCES VIDEO ********/
+
+.vid {
+    background-color: #0a0a0a;
+    width: auto;
+    padding: 50px 0;
+}
+
+.vid .container{
+    position : relative;
+}
+
+.vid .line {
+    margin: 30px auto; 
+    width: 30px;
+    height: 2px;
+    background-color: #dcdcdc;
+}
+
+.vid p{
+    color: #fff;
+    font-size : 10pt;
+    letter-spacing : 2pt;
+    font-weight : 500;
+}
+
+.vid .card{
+    background-color : #1b1b1b;
+    color : #dcdcdc;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 640px){
+
+    .vid .container iframe{
+        width: 350px;
+        height : 220px;
+    }
+}
+
+/******** FOOTER ********/
+
+footer {
+    background-color: #000000;
+}
+
+footer h4 {
+    font-size: 8pt;
+    letter-spacing: 2pt;
+    margin: 100px auto;
+    color: #fff;
+}
